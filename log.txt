@@ -1,0 +1,31 @@
+Commands for viewing Log Files in Linux for security.
+The log files generated in a Linux environment can typically be classified into four different 
+categories: 
+• Application Logs 
+• Event Logs 
+• Service Logs 
+• System Log 
+Linux provides a centralized repository of log files that can be located under the /var/log directory. 
+1. In root terminal go to log directory 
+$ cd /var/log 
+2. To Show general messages and info regarding the system syslog. 
+$ cat syslog 
+3. To Show system authorization information, including user logins authentication mechanism
+that were used. 
+$ cat auth.log 
+4. Kern.log stores Kernel logs and warning data. 
+$ cat kern.log (or) cat /var/log/kern.log 
+5. maillog stores mail server logs, handy for postfix, smtpd, or email-related services info 
+running on your server. 
+$ cat maillog (or) cat /var/log/mail.log 
+6. to see text files that include information about all the requests processed by the Apache server 
+and error log directory 
+$ cat httpd (or) cat /var/log/httpd 
+7. boot.log is a repository of all information related to booting and any messages logged during 
+startup. 
+$ cat boot.log (or) cat /var/log/boot.log 
+ 
+8. wtmp is a file containing a history of all logins and logouts. 
+$ cat wtmp (or) cat /var/log/wtmp 
+9. To show information related to authentication and authorization privileges. 
+$ cat secure (or) cat /var/log/secure
