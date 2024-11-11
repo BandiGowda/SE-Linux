@@ -1,0 +1,41 @@
+SElinux (Hardening of Linux)
+SE Linux stands for security enhanced Linux, which is an access control system that is builtin to 
+the Linux kernel .It is used to enforce there source policies that define what level of access users 
+,programs ,and services have on a system.
+SELinux Operating Modes
+SELinux can operate in two global modes:
+➢ Permissive mode ,in which permission denials are logged but not enforced.
+➢ Enforcing mode ,in which permissions denials are both logged and enforced.
+Setting SELinux Modes SELinux runs in one of three modes
+1) Disabled: The kernel uses only DAC rules for access control. SELinux does not enforce any 
+security policy because no policy is loaded into the kernel.
+2) Enforcing :The kernel denies access to users and program sunless permitted by SE Linux 
+security policy rules. All denial messages are logged as AVC (Access Vector Cache) denials. This is 
+the default mode that enforces SELinux security policy.
+3) Permissive :The kernel does not enforce security policy rules but SELinux sends denial
+messages to a log file. This allows you to see what actions would have been denied if
+SELinux were running in enforcing mode. This mode is intended to used for diagnosing the 
+behavior of SELinux.
+Commands to Execute SELinux
+➢ To install SELinux package in linux system
+$ Sudo apt update
+$ Sudo apt install policycoreutils selinux-utils selinux-basics
+➢ Next command to enable SELinuxon system (execute this command in root terminal)
+$ Sudo Selinux-activate
+➢ Next, reboot system to apply changes
+$ Reboot
+➢ Next ,Check the status of selinux
+$ sestatus
+➢ Next set/change SELinux to enforcing mode
+$ sudo selinux-config-enforcing
+➢ Next reboot system to apply changes
+$ reboot
+➢ Next check the status of selinux
+$ sestatus
+➢ To check mode of SE Linux
+$ getenforce
+➢ To set the current mode to Enforcing:
+$ sudo setenforce enforcing
+➢ To set the current mode to Permissive:
+$ sudo
+$ setenforce permissive
